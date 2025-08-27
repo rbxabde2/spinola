@@ -177,7 +177,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -377,6 +377,20 @@
             min-width: 320px;
         }
 
+        /* Additional Image Gallery */
+        .gallery-section {
+            padding: 3rem 1rem;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         /* Mobile Responsive Design */
         @media (max-width: 480px) {
             .hero h1 {
@@ -409,6 +423,10 @@
             .countdown-label {
                 font-size: 0.7rem;
             }
+
+            .product-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Tablet Design */
@@ -417,7 +435,7 @@
                 font-size: 3rem;
             }
             
-            .product-grid {
+            .product-grid, .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
             }
@@ -445,6 +463,10 @@
             }
             
             .steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .product-grid, .gallery-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
@@ -511,6 +533,31 @@
                 </div>
                 <div class="product-card">
                     <img src="https://i.ibb.co/GQvb4Dn9/6ae90c81-9de9-4b55-9a1c-68961cb0f01d.png" alt="Chat jouant" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/wNCDszTc/62b04880-09cd-4758-99dc-720c058d6a87.png" alt="Arbre à chat moderne" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/Ggr7pQw/0c5a5ca8-4d43-4b43-9c7f-d2f30e27ca7a.png" alt="Chat confortable" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/CpxdLsST/6d3a8341-f242-4739-b0c7-3616ac490b84.png" alt="Design élégant" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/23JnqhfR/3be8a546-19d5-4639-b4c2-94a2a8dc278e.png" alt="Arbre à chat premium" class="product-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">📸 Plus de Photos Exclusives</h2>
+            <div class="gallery-grid">
+                <div class="product-card">
+                    <img src="https://i.ibb.co/Z60y8RS0/61-Fh9f-KQkw-L-AC-SL1500.png" alt="Vue détaillée" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/hFkZJPPf/dc141d62-6ba8-407d-9084-961f3ef86f1f.png" alt="Chat heureux" class="product-image">
                 </div>
             </div>
         </section>
