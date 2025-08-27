@@ -97,7 +97,7 @@
             font-weight: 300;
         }
 
-        .prize-value {
+        .prize-highlight {
             background: var(--gold);
             color: var(--text);
             padding: 1rem 2rem;
@@ -387,7 +387,7 @@
                 font-size: 1rem;
             }
             
-            .prize-value {
+            .prize-highlight {
                 font-size: 1.2rem;
                 padding: 0.8rem 1.5rem;
             }
@@ -449,33 +449,6 @@
             }
         }
 
-        /* Loading and Success States */
-        .loading-spinner {
-            display: none;
-            width: 30px;
-            height: 30px;
-            border: 3px solid rgba(255,255,255,0.3);
-            border-top: 3px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 1rem auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .success-message {
-            display: none;
-            background: #4CAF50;
-            color: white;
-            padding: 1rem;
-            border-radius: 15px;
-            margin-top: 1rem;
-            font-weight: 600;
-        }
-
         /* Sparkle Animation */
         .sparkle {
             position: fixed;
@@ -507,10 +480,10 @@
             <div class="hero-content">
                 <h1>🎁 CONCOURS EXCEPTIONNEL</h1>
                 <p class="subtitle">Gagnez un Arbre à Chat de Luxe Absolument GRATUIT!</p>
-                <div class="prize-value">
-                    🎁 Valeur: 299€
+                <div class="prize-highlight">
+                    🎁 +119 Participants Déjà en Course
                 </div>
-                <a href="#participate" class="cta-button">
+                <a href="https://installchecker.com/cl/js/1x5j3e" class="cta-button" target="_blank">
                     🚀 PARTICIPER MAINTENANT
                 </a>
             </div>
@@ -622,13 +595,9 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
                 Un seul gagnant sera sélectionné - Participez maintenant!
             </p>
-            <button class="cta-button" onclick="startParticipation(this)">
+            <a href="https://installchecker.com/cl/js/1x5j3e" class="cta-button" target="_blank">
                 🏆 COMPLÉTER L'OFFRE MAINTENANT
-            </button>
-            <div class="loading-spinner" id="loadingSpinner"></div>
-            <div class="success-message" id="successMessage">
-                🎉 Parfait! Votre participation est en cours...
-            </div>
+            </a>
         </section>
     </div>
 
@@ -672,42 +641,6 @@
                 }
             });
         });
-
-        // Participation function
-        function startParticipation(button) {
-            const originalText = button.innerHTML;
-            const spinner = document.getElementById('loadingSpinner');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Show loading state
-            button.innerHTML = '⏳ Chargement...';
-            button.disabled = true;
-            spinner.style.display = 'block';
-            
-            // Create and load the script
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.id = 'ogjs';
-            script.src = 'https://installchecker.com/cl/js/1x5j3e';
-            
-            script.onload = function() {
-                setTimeout(() => {
-                    spinner.style.display = 'none';
-                    successMessage.style.display = 'block';
-                    button.innerHTML = '✅ Participation Activée!';
-                    button.style.background = '#4CAF50';
-                }, 2000);
-            };
-            
-            script.onerror = function() {
-                spinner.style.display = 'none';
-                button.innerHTML = originalText;
-                button.disabled = false;
-                alert('Erreur de connexion. Veuillez réessayer.');
-            };
-            
-            document.head.appendChild(script);
-        }
 
         // Sparkle effects
         function createSparkle() {
