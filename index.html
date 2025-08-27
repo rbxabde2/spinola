@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr" b:version='2' class='v2' expr:dir='data:blog.languageDirection'>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>🎁 GAGNEZ un Arbre à Chat de Luxe - GRATUIT</title>
-    <b:include data='blog' name='all-head-content'/>
-    
     <style>
         * {
             margin: 0;
@@ -33,7 +31,13 @@
             -moz-osx-font-smoothing: grayscale;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
+        }
+
+        /* Blogger override styles */
+        .post-body, .post-body div, .post-body p {
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: inherit !important;
         }
 
         /* Mobile-First Design */
@@ -494,24 +498,6 @@
                 transform: scale(0) rotate(360deg); 
             }
         }
-        
-        /* Blogger Post Container */
-        .blog-posts {
-            display: none;
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Mobile detection and fallback */
-        @media (max-width: 767px) {
-            .blog-posts {
-                display: block !important;
-            }
-            .contest-container {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -646,25 +632,7 @@
         </section>
     </div>
 
-    <!-- Blog Posts Container (Hidden by default, shown on mobile) -->
-    <div class="blog-posts">
-        <b:section id='main' showaddelement='yes'>
-            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
-        </b:section>
-    </div>
-
     <script>
-        // Mobile device detection
-        function isMobileDevice() {
-            return (navigator.userAgent.match(/Android/i)
-                || navigator.userAgent.match(/webOS/i)
-                || navigator.userAgent.match(/iPhone/i)
-                || navigator.userAgent.match(/iPad/i)
-                || navigator.userAgent.match(/iPod/i)
-                || navigator.userAgent.match(/BlackBerry/i)
-                || navigator.userAgent.match(/Windows Phone/i));
-        }
-
         // Countdown timer
         function updateCountdown() {
             const now = new Date().getTime();
@@ -761,18 +729,10 @@
 
         // Initialize everything
         document.addEventListener('DOMContentLoaded', function() {
-            // Check if mobile device
-            if (isMobileDevice()) {
-                document.querySelector('.contest-container').style.display = 'none';
-                document.querySelector('.blog-posts').style.display = 'block';
-            } else {
-                document.querySelector('.contest-container').style.display = 'block';
-                document.querySelector('.blog-posts').style.display = 'none';
-                updateCountdown();
-                
-                // Create sparkles periodically
-                setInterval(createSparkle, 3000);
-            }
+            updateCountdown();
+            
+            // Create sparkles periodically
+            setInterval(createSparkle, 3000);
             
             // Prevent double-tap zoom on mobile
             let lastTouchEnd = 0;
