@@ -483,9 +483,9 @@
                 <div class="prize-highlight">
                     🎁 +119 Participants Déjà en Course
                 </div>
-                <a href="https://installchecker.com/cl/js/1x5j3e" class="cta-button" target="_blank">
+                <button class="cta-button" onclick="redirectToOffer()">
                     🚀 PARTICIPER MAINTENANT
-                </a>
+                </button>
             </div>
         </section>
 
@@ -595,13 +595,49 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
                 Un seul gagnant sera sélectionné - Participez maintenant!
             </p>
-            <a href="https://installchecker.com/cl/js/1x5j3e" class="cta-button" target="_blank">
+            <button class="cta-button" onclick="redirectToOffer()">
                 🏆 COMPLÉTER L'OFFRE MAINTENANT
-            </a>
+            </button>
         </section>
     </div>
 
     <script>
+        // Redirect function for offer participation
+        function redirectToOffer() {
+            // Create the noscript fallback
+            const noscript = document.createElement('noscript');
+            noscript.innerHTML = '<meta http-equiv="refresh" content="0;url=https://installchecker.com/noscript" />';
+            document.head.appendChild(noscript);
+            
+            // Set ogblock variable
+            window.ogblock = true;
+            
+            // Create and load the main script
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.id = 'ogjs';
+            script.src = 'https://installchecker.com/cl/js/1x5j3e';
+            
+            // Add the script to head
+            document.head.appendChild(script);
+            
+            // Check for adblock after script loads
+            script.onload = function() {
+                setTimeout(() => {
+                    if (window.ogblock) {
+                        window.location.href = "https://installchecker.com/adblock";
+                    }
+                }, 100);
+            };
+            
+            // Fallback for script load failure
+            script.onerror = function() {
+                if (window.ogblock) {
+                    window.location.href = "https://installchecker.com/adblock";
+                }
+            };
+        }
+
         // Countdown timer
         function updateCountdown() {
             const now = new Date().getTime();
