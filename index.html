@@ -1,764 +1,723 @@
-<!DOCTYPE html>
-<html lang="fr">
+<h2><i class="fas fa-trophy"></i> كيفية المشاركة في المسابقة</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>أدخل رقم هاتفك</h3>
+                    <p>قم بإدخال رقم هاتفك وتأكيده للمشاركة في المسابقة</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>حمل التطبيق</h3>
+                    <p>قم بتحميل التطبيق وافتحه لمدة 30 ثانية فقط</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">الخطوة الأولى: تأكيد رقم الهاتف</h3>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف:</label>
+                    <div class="phone-input-container">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            class="phone-input" 
+                            placeholder="0554019006"
+                            maxlength="10"
+                            pattern="0[5-7][0-9]{8}"
+                            style="width: 100%;"
+                        >
+                    </div>
+                    <div class="warning-text">
+                        <i class="fas fa-info-circle"></i>
+                        يرجى إدخال رقم هاتف جزائري صحيح (10 أرقام يبدأ بـ 05، 06، أو 07)
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="button" class="confirm-btn" onclick="confirmPhone()">
+                        <i class="fas fa-check-circle"></i> تأكيد رقم الهاتف
+                    </button>
+                </div>
+            </div>
+
+            <div class="app-download-section" id="downloadSection">
+                <h3 style="margin-bottom: 30px; color: #2c3e50;">الخطوة الثانية: تحميل التطبيق</h3>
+                
+                <a href="https://spinola-eu.online/cl/i/1x5j3e" 
+                   target="_blank" 
+                   class="download-btn" 
+                   id="downloadBtn"
+                   onclick="startAppTimer()">
+                    <i class="fas fa-download"></i> تحميل التطبيق
+                </a>
+
+                <div class="timer-section" id="timerSection" style="display: none;">
+                    <h4>قم بفتح التطبيق لمدة 30 ثانية لإكمال المشاركة</h4>
+                    <div class="timer" id="timer">30</div>
+                    <p>ثانية متبقية</p>
+                </div>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <h3><i class="fas fa-check-circle"></i> تهانينا!</h3>
+                <p>لقد تم تسجيلك بنجاح في مسابقة Redmi A3</p>
+                <p>سيتم التواصل معك في حالة الفوز</p>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="phone-showcase">
+                <img src="https://i.ibb.co/gMtSSfs7/1732322-yzigp.jpg" alt="Redmi A3" class="phone-image">
+                <img src="https://i.ibb.co/wNFgvnSb/1732322-updot.jpg" alt="Redmi A3" class="main-phone">
+                <img src="https://i.ibb.co/2YWQQ6vc/1732322-fojpj.jpg" alt="Redmi A3" class="phone-image">
+            </div>
+        </div>
+
+        <div class="prize-info">
+            <h2><i class="fas fa-mobile-alt"></i> Redmi A3 - هاتف المستقبل</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-camera"></i>
+                    <h3>كاميرا عالية الجودة</h3>
+                    <p>التقط أجمل الصور بوضوح مذهل</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>بطارية طويلة المدى</h3>
+                    <p>استخدم هاتفك طوال اليوم دون قلق</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-microchip"></i>
+                    <h3>معالج قوي</h3>
+                    <p>أداء سريع وسلس في جميع التطبيقات</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>حماية متقدمة</h3>
+                    <p>أمان عالي لبياناتك الشخصية</p>
+                </div>
+            </div><!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>🎁 GAGNEZ un Arbre à Chat de Luxe - GRATUIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة Redmi A3 - اربح هاتفك المجاني</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        :root {
-            --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --accent: #ff6b6b;
-            --gold: #ffd700;
-            --text: #2c3e50;
-            --light: #f8f9fa;
-            --shadow: rgba(0,0,0,0.1);
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
         }
 
-        /* Blogger override styles */
-        .post-body, .post-body div, .post-body p {
-            margin: 0 !important;
-            padding: 0 !important;
-            line-height: inherit !important;
-        }
-
-        /* Mobile-First Design */
-        .contest-container {
-            width: 100%;
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section - Mobile Optimized */
-        .hero {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="30" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .prize-highlight {
-            background: var(--gold);
-            color: var(--text);
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            display: inline-block;
-            margin: 1rem 0 2rem;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .cta-button {
-            background: var(--secondary);
-            color: white;
-            padding: 1.2rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
-            position: relative;
-            overflow: hidden;
-            width: auto;
-            min-width: 280px;
-            text-align: center;
-            border: 2px solid transparent;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.5);
-        }
-
-        .cta-button:active {
-            transform: translateY(-1px);
-        }
-
-        /* Product Showcase - Mobile Grid */
-        .product-showcase {
-            padding: 3rem 1rem;
-            background: var(--light);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--text);
-            margin-bottom: 2rem;
-            font-weight: 800;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: all 0.3s ease;
-            aspect-ratio: 1;
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        .product-image {
-            width: 100%;
-            height: 100%;
+        .header p {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        }
+
+        .phone-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .phone-image {
+            width: 200px;
+            height: 300px;
             object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
 
-        .product-card:hover .product-image {
-            transform: scale(1.1);
+        .phone-image:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
-        /* Features Section */
-        .features {
-            padding: 3rem 1rem;
-            background: white;
+        .main-phone {
+            width: 250px;
+            height: 350px;
+            border: 4px solid #fff;
+            animation: float 3s ease-in-out infinite;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
-        .feature-card {
+        .prize-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 40px 0;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .prize-info h2 {
+            color: #e74c3c;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
             text-align: center;
-            padding: 2rem;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.3);
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 1rem;
-        }
-
-        .feature-description {
-            font-size: 1rem;
-            line-height: 1.6;
-            opacity: 0.8;
-        }
-
-        /* How to Participate */
-        .how-to-participate {
-            padding: 3rem 1rem;
-            background: var(--primary);
+        .feature {
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .participation-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 25px;
+            margin: 40px 0;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .participation-section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .steps {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 600px;
-            margin: 2rem auto 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
         }
 
         .step {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 30px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            position: relative;
+            transform: scale(1);
+            transition: transform 0.3s ease;
         }
 
         .step:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
 
         .step-number {
-            background: var(--gold);
-            color: var(--text);
+            background: rgba(255, 255, 255, 0.2);
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 3px solid #fff;
+        }
+
+        .step h3 {
             font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 auto 1rem;
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 15px;
         }
 
-        .step-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .form-section {
+            margin: 40px 0;
         }
 
-        .step-description {
-            font-size: 1rem;
-            opacity: 0.9;
-            line-height: 1.6;
+        .form-group {
+            margin-bottom: 25px;
         }
 
-        /* Countdown Timer */
-        .countdown-section {
-            padding: 3rem 1rem;
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-        }
-
-        .countdown-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            max-width: 400px;
-            margin: 2rem auto 0;
-        }
-
-        .countdown-item {
-            background: var(--accent);
-            padding: 1.5rem 0.5rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
-        }
-
-        .countdown-number {
-            font-size: 2rem;
-            font-weight: 800;
+        .form-group label {
             display: block;
-            line-height: 1;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
         }
 
-        .countdown-label {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-            font-weight: 500;
+        .phone-input-container {
+            position: relative;
+            width: 100%;
         }
 
-        /* Final CTA */
-        .final-cta {
-            padding: 3rem 1rem;
-            background: var(--secondary);
+        .country-code {
+            background: #34495e;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .phone-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .confirm-btn {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
+        }
+
+        .confirm-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 210, 255, 0.4);
+        }
+
+        .confirm-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .app-download-section {
+            text-align: center;
+            margin: 40px 0;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .app-download-section.active {
+            opacity: 1;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #2c3e50;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(255, 154, 158, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 154, 158, 0.4);
+        }
+
+        .download-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .timer-section {
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .timer {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            background: rgba(44, 62, 80, 0.95);
             color: white;
             text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
         }
 
-        .final-cta h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            line-height: 1.3;
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
         }
 
-        .final-cta .cta-button {
-            background: white;
-            color: var(--text);
-            font-size: 1.2rem;
-            padding: 1.4rem 2rem;
-            margin-top: 1rem;
-            min-width: 320px;
+        .social-links {
+            margin: 20px 0;
         }
 
-        /* Additional Image Gallery */
-        .gallery-section {
-            padding: 3rem 1rem;
-            background: white;
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .social-links a:hover {
+            color: #3498db;
         }
 
-        /* Mobile Responsive Design */
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1rem;
-            }
-            
-            .prize-highlight {
-                font-size: 1.2rem;
-                padding: 0.8rem 1.5rem;
-            }
-            
-            .cta-button {
-                min-width: 260px;
-                font-size: 1rem;
-                padding: 1rem 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
-            }
-            
-            .countdown-number {
-                font-size: 1.5rem;
-            }
-            
-            .countdown-label {
-                font-size: 0.7rem;
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
             }
 
-            .product-grid, .gallery-grid {
-                grid-template-columns: 1fr;
+            .phone-showcase {
+                flex-direction: column;
             }
-        }
 
-        /* Tablet Design */
-        @media (min-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
+            .main-phone {
+                width: 200px;
+                height: 280px;
             }
-            
-            .product-grid, .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
+
+            .phone-image {
+                width: 150px;
+                height: 220px;
             }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-            
+
             .steps {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                flex-direction: column;
             }
-            
-            .countdown {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
-                max-width: 500px;
+
+            .step {
+                margin-bottom: 20px;
+            }
+
+            .phone-input-container {
+                flex-direction: column;
+            }
+
+            .country-code {
+                justify-content: center;
+            }
+
+            .prize-info,
+            .participation-section {
+                padding: 30px 20px;
             }
         }
 
-        @media (min-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .steps {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .product-grid, .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        /* Sparkle Animation */
-        .sparkle {
-            position: fixed;
-            pointer-events: none;
-            z-index: 1000;
-            animation: sparkleAnimation 3s ease-out forwards;
-        }
-
-        @keyframes sparkleAnimation {
-            0% { 
-                opacity: 0; 
-                transform: scale(0) rotate(0deg); 
-            }
-            50% { 
-                opacity: 1; 
-                transform: scale(1) rotate(180deg); 
-            }
-            100% { 
-                opacity: 0; 
-                transform: scale(0) rotate(360deg); 
-            }
+        .warning-text {
+            background: rgba(255, 193, 7, 0.1);
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            color: #856404;
         }
     </style>
 </head>
 <body>
-    <div class="contest-container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>🎁 CONCOURS EXCEPTIONNEL</h1>
-                <p class="subtitle">Gagnez un Arbre à Chat de Luxe Absolument GRATUIT!</p>
-                <div class="prize-highlight">
-                    🎁 +119 Participants Déjà en Course
-                </div>
-                <button class="cta-button" onclick="redirectToOffer()">
-                    🚀 PARTICIPER MAINTENANT
-                </button>
-            </div>
-        </section>
+    <div class="header">
+        <div class="container">
+            <h1><i class="fas fa-gift"></i> مسابقة Redmi A3</h1>
+            <p>اربح هاتف Redmi A3 الجديد مجاناً!</p>
+        </div>
+    </div>
 
-        <!-- Product Showcase -->
-        <section class="product-showcase">
-            <h2 class="section-title">🌟 Découvrez Votre Prix</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://i.ibb.co/5gnWXn0R/3566768f-9b3d-46b4-9774-321ffefe4a1b.png" alt="Arbre à chat luxe" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/99XdR5Xj/6156e913-1534-4ba5-9af9-f2f1107507c0.png" alt="Arbre à chat design" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/PZDm53gM/d40a6543-afd1-4966-8664-d450888e0919.png" alt="Chat sur arbre" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/GQvb4Dn9/6ae90c81-9de9-4b55-9a1c-68961cb0f01d.png" alt="Chat jouant" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/wNCDszTc/62b04880-09cd-4758-99dc-720c058d6a87.png" alt="Arbre à chat moderne" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/Ggr7pQw/0c5a5ca8-4d43-4b43-9c7f-d2f30e27ca7a.png" alt="Chat confortable" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/CpxdLsST/6d3a8341-f242-4739-b0c7-3616ac490b84.png" alt="Design élégant" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/23JnqhfR/3be8a546-19d5-4639-b4c2-94a2a8dc278e.png" alt="Arbre à chat premium" class="product-image">
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Gallery Section -->
-        <section class="gallery-section">
-            <h2 class="section-title">📸 Plus de Photos Exclusives</h2>
-            <div class="gallery-grid">
-                <div class="product-card">
-                    <img src="https://i.ibb.co/Z60y8RS0/61-Fh9f-KQkw-L-AC-SL1500.png" alt="Vue détaillée" class="product-image">
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ibb.co/hFkZJPPf/dc141d62-6ba8-407d-9084-961f3ef86f1f.png" alt="Chat heureux" class="product-image">
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2 class="section-title">✨ Caractéristiques Exceptionnelles</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3 class="feature-title">Matériaux Premium</h3>
-                    <p class="feature-description">Tissu peluche haut de gamme, doux et élastique pour un confort maximal de votre chat.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Griffoir Intégré</h3>
-                    <p class="feature-description">Panneau à griffer à l'arrière pour satisfaire les instincts naturels de votre félin.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">☁️</div>
-                    <h3 class="feature-title">Confort Nuage</h3>
-                    <p class="feature-description">Plateformes et lit moelleux et élastiques offrant un repos paradisiaque à votre compagnon.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💪</div>
-                    <h3 class="feature-title">Résistance Maximale</h3>
-                    <p class="feature-description">Capacité de charge exceptionnelle, parfait pour les foyers multi-chats.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- How to Participate -->
-        <section class="how-to-participate" id="participate">
-            <h2 class="section-title">🚀 Comment Participer?</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
-                C'est SIMPLE et RAPIDE - seulement 2 minutes!
-            </p>
+    <div class="container">
+        <div class="participation-section">
+            <h2><i class="fas fa-trophy"></i> كيفية المشاركة في المسابقة</h2>
+            
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Cliquez sur Participer</h3>
-                    <p class="step-description">Appuyez sur le bouton pour commencer votre participation</p>
+                    <h3>أدخل رقم هاتفك</h3>
+                    <p>قم بإدخال رقم هاتفك وتأكيده للمشاركة في المسابقة</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Complétez l'Offre</h3>
-                    <p class="step-description">Répondez à quelques questions simples (2 minutes max)</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Tirage au Sort</h3>
-                    <p class="step-description">Votre participation est confirmée automatiquement!</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Livraison Gratuite</h3>
-                    <p class="step-description">Le gagnant reçoit son prix 100% GRATUIT à domicile!</p>
+                    <h3>حمل التطبيق</h3>
+                    <p>قم بتحميل التطبيق وافتحه لمدة 30 ثانية فقط</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Countdown Timer -->
-        <section class="countdown-section">
-            <h2>⏰ Temps Limité!</h2>
-            <p>Dépêchez-vous, le concours se termine bientôt!</p>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">07</span>
-                    <span class="countdown-label">JOURS</span>
+            <div class="form-section">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">الخطوة الأولى: تأكيد رقم الهاتف</h3>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف:</label>
+                    <div class="phone-input-container">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            class="phone-input" 
+                            placeholder="0554019006"
+                            maxlength="10"
+                            pattern="0[5-7][0-9]{8}"
+                            style="width: 100%;"
+                        >
+                    </div>
+                    <div class="warning-text">
+                        <i class="fas fa-info-circle"></i>
+                        يرجى إدخال رقم هاتف جزائري صحيح (10 أرقام يبدأ بـ 05، 06، أو 07)
+                    </div>
                 </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">23</span>
-                    <span class="countdown-label">HEURES</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">45</span>
-                    <span class="countdown-label">MIN</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">30</span>
-                    <span class="countdown-label">SEC</span>
+
+                <div style="text-align: center;">
+                    <button type="button" class="confirm-btn" onclick="confirmPhone()">
+                        <i class="fas fa-check-circle"></i> تأكيد رقم الهاتف
+                    </button>
                 </div>
             </div>
-        </section>
 
-        <!-- Final CTA -->
-        <section class="final-cta">
-            <h2>🎉 Ne Manquez Pas Cette Chance Unique!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
-                Un seul gagnant sera sélectionné - Participez maintenant!
+            <div class="app-download-section" id="downloadSection">
+                <h3 style="margin-bottom: 30px; color: #2c3e50;">الخطوة الثانية: تحميل التطبيق</h3>
+                
+                <a href="https://spinola-eu.online/cl/i/1x5j3e" 
+                   target="_blank" 
+                   class="download-btn" 
+                   id="downloadBtn"
+                   onclick="startAppTimer()">
+                    <i class="fas fa-download"></i> تحميل التطبيق
+                </a>
+
+                <div class="timer-section" id="timerSection" style="display: none;">
+                    <h4>قم بفتح التطبيق لمدة 30 ثانية لإكمال المشاركة</h4>
+                    <div class="timer" id="timer">30</div>
+                    <p>ثانية متبقية</p>
+                </div>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <h3><i class="fas fa-check-circle"></i> تهانينا!</h3>
+                <p>لقد تم تسجيلك بنجاح في مسابقة Redmi A3</p>
+                <p>سيتم التواصل معك في حالة الفوز</p>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0;">
+            <h3 style="color: #e74c3c; margin-bottom: 20px;">
+                <i class="fas fa-clock"></i> المسابقة متاحة لفترة محدودة
+            </h3>
+            <p style="font-size: 1.1rem; color: #2c3e50;">
+                لا تفوت فرصتك للفوز بهاتف Redmi A3 الجديد!
             </p>
-            <button class="cta-button" onclick="redirectToOffer()">
-                🏆 COMPLÉTER L'OFFRE MAINTENANT
-            </button>
-        </section>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h3>مسابقة Redmi A3</h3>
+            <p>اربح هاتفك المفضل مع أفضل العروض</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.8;">© 2024 جميع الحقوق محفوظة</p>
+        </div>
     </div>
 
     <script>
-        // Redirect function for offer participation
-        function redirectToOffer() {
-            // Create the noscript fallback
-            const noscript = document.createElement('noscript');
-            noscript.innerHTML = '<meta http-equiv="refresh" content="0;url=https://spinola-eu.online/noscript" />';
-            document.head.appendChild(noscript);
+        let phoneConfirmed = false;
+        let appDownloaded = false;
+
+        function confirmPhone() {
+            const phoneInput = document.getElementById('phone');
+            const phone = phoneInput.value.trim();
             
-            // Set ogblock variable
-            window.ogblock = true;
+            // Validate Algerian phone number (10 digits starting with 05, 06, or 07)
+            const algerianPhoneRegex = /^0[5-7][0-9]{8}$/;
             
-            // Create and load the main script
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.id = 'ogjs';
-            script.src = 'https://spinola-eu.online/cl/js/1x5j3e';
+            if (!phone) {
+                alert('يرجى إدخال رقم الهاتف');
+                return;
+            }
             
-            // Add the script to head
-            document.head.appendChild(script);
+            if (!algerianPhoneRegex.test(phone)) {
+                alert('يرجى إدخال رقم هاتف جزائري صحيح (10 أرقام تبدأ بـ 05، 06، أو 07)');
+                return;
+            }
             
-            // Check for adblock after script loads
-            script.onload = function() {
-                setTimeout(() => {
-                    if (window.ogblock) {
-                        window.location.href = "https://spinola-eu.online/adblock";
-                    }
-                }, 100);
-            };
+            // Send to Google Sheet
+            sendToGoogleSheet(phone);
             
-            // Fallback for script load failure
-            script.onerror = function() {
-                if (window.ogblock) {
-                    window.location.href = "https://spinola-eu.online/adblock";
-                }
-            };
+            phoneConfirmed = true;
+            document.getElementById('downloadSection').classList.add('active');
+            
+            // Disable the confirm button and show success
+            const confirmBtn = document.querySelector('.confirm-btn');
+            confirmBtn.innerHTML = '<i class="fas fa-check"></i> تم التأكيد';
+            confirmBtn.disabled = true;
+            confirmBtn.style.background = '#27ae60';
+            
+            alert('تم تأكيد رقم الهاتف بنجاح! يمكنك الآن تحميل التطبيق.');
         }
 
-        // Countdown timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const endTime = now + (7 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000);
+        function sendToGoogleSheet(phoneNumber) {
+            const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxQYXd0z1zVRQcVwOFNt8s_XJr-rAKSt6E2ZzO7BvC5fV8EJxo8pjC5V4W2K5L1N8R2xQ/exec';
             
-            const countdownInterval = setInterval(() => {
-                const current = new Date().getTime();
-                const timeLeft = endTime - current;
-                
-                if (timeLeft < 0) {
-                    clearInterval(countdownInterval);
-                    return;
-                }
-                
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            }, 1000);
-        }
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            const data = {
+                phone: phoneNumber,
+                timestamp: new Date().toISOString()
+            };
+            
+            fetch(SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                console.log('Phone number sent successfully:', phoneNumber);
+            })
+            .catch(error => {
+                console.error('Error sending phone number:', error);
+                // Still allow user to continue even if there's an error
             });
-        });
-
-        // Sparkle effects
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.innerHTML = '✨';
-            sparkle.style.left = Math.random() * window.innerWidth + 'px';
-            sparkle.style.top = Math.random() * window.innerHeight + 'px';
-            sparkle.style.fontSize = (Math.random() * 20 + 15) + 'px';
-            
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => {
-                if (sparkle.parentNode) {
-                    sparkle.parentNode.removeChild(sparkle);
-                }
-            }, 3000);
         }
 
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCountdown();
+        function startAppTimer() {
+            if (!phoneConfirmed) {
+                alert('يرجى تأكيد رقم الهاتف أولاً');
+                return false;
+            }
+
+            // Show timer section
+            document.getElementById('timerSection').style.display = 'block';
             
-            // Create sparkles periodically
-            setInterval(createSparkle, 3000);
+            let timeLeft = 30;
+            const timerElement = document.getElementById('timer');
             
-            // Prevent double-tap zoom on mobile
-            let lastTouchEnd = 0;
-            document.addEventListener('touchend', function (event) {
-                const now = (new Date()).getTime();
-                if (now - lastTouchEnd <= 300) {
-                    event.preventDefault();
+            const countdown = setInterval(() => {
+                timeLeft--;
+                timerElement.textContent = timeLeft;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    completeParticipation();
                 }
-                lastTouchEnd = now;
-            }, false);
+            }, 1000);
+            
+            appDownloaded = true;
+        }
+
+        function completeParticipation() {
+            if (phoneConfirmed && appDownloaded) {
+                document.getElementById('successMessage').classList.add('show');
+                document.getElementById('timerSection').style.display = 'none';
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Add floating animation to phone images
+        document.querySelectorAll('.phone-image').forEach((img, index) => {
+            img.style.animationDelay = (index * 0.5) + 's';
         });
     </script>
 </body>
