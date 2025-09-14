@@ -233,12 +233,24 @@
         }
 
         .screenshot-gallery {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .screenshot-container {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.7);
         }
 
         .screenshot {
@@ -314,7 +326,7 @@
                 font-size: 1.1rem;
             }
 
-            .screenshots-container {
+            .screenshot-gallery {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -346,6 +358,10 @@
             .version-info {
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            .screenshot-gallery {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -432,7 +448,12 @@
     <section class="screenshots-section">
         <h2 class="section-title">GAMEPLAY SCREENSHOTS</h2>
         <div class="screenshot-gallery">
-            <img src="https://i.ibb.co/M58Jm7FC/e1d681c0-dc8d-4105-a8c8-37bb39545089.png" alt="Camino Real Gameplay" class="screenshot">
+            <div class="screenshot-container">
+                <img src="https://i.ibb.co/pvSDKkQr/unnamed-1.png" alt="Camino Real Gameplay Screenshot 1" class="screenshot">
+            </div>
+            <div class="screenshot-container">
+                <img src="https://i.ibb.co/mV0ZcPT7/unnamed.png" alt="Camino Real Gameplay Screenshot 2" class="screenshot">
+            </div>
         </div>
     </section>
 
